@@ -1,0 +1,24 @@
+package dev.shafayet.Books;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class BooksApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BooksApplication.class, args);
+	}
+	@GetMapping("/")
+	public String rootAPI(){
+		return "Hello, World";
+	}
+	@GetMapping("/home")
+	public String homeAPI(){
+		return "Hello, Home";
+	}
+
+}
